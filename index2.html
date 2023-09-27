@@ -9,11 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/node_modules/@waaark/luge/dist/css/luge.css" />
+
     <script src="/darkmode.js"></script>
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body class="font-[Inter] mx-auto max-w-screen-xl px-2 dark:bg-[#212121]">
-    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-6 dark:bg-gray-800 mx-auto max-w-screen-xl">
+    <header data-lg-reveal="fade-to-bottom" class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-6 dark:bg-gray-800 mx-auto max-w-screen-xl">
       <nav class="max-w-[85rem] w-full mx-auto sm:flex sm:items-center sm:justify-between" aria-label="Global">
         <div class="flex items-center justify-between">
           <a class="flex-none text-2xl font-semibold dark:text-white" href="#">Museum Bung Karno</a>
@@ -52,7 +54,7 @@
       </nav>
     </header>
 
-    <section class="relative flex items-center mx-auto max-w-screen-xl overflow-hidden min-h-[500px]">
+    <section class="relative flex items-center mx-auto max-w-screen-xl overflow-hidden min-h-[500px]" data-lg-reveal="fade-to-bottom">
       <embed class="mx-auto h-[500px] overflow-hidden lazyload w-full rounded-xl" src="https://kehen.arcomteknologi.id/panorama/utama/index.html" preload="auto" />
       <div
         class="rounded-xl text-center md:text-left absolute text-white top-0 bottom-0 right-0 left-0 bg-gradient-to-r from-black to-transparent flex flex-col px-8 md:px-20 justify-center focus:pointer-events-auto xl:pointer-events-none focus:from-transparent focus:to-transparent"
@@ -76,7 +78,7 @@
       </div>
     </section>
 
-    <main class="grid md:grid-cols-2 mx-auto max-w-screen-xl gap-3 mt-3">
+    <main class="grid md:grid-cols-2 mx-auto max-w-screen-xl gap-3 mt-3" data-lg-reveal="fade-to-top" data-lg-reveal-stagger="0.2">
       <!-- Sejarah -->
       <div id="sejarah" class="min-h-[500px] relative bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] overflow-hidden">
         <img class="w-full h-full absolute top-0 left-0 object-cover rounded-xl" src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/2023/02/27/20200623461-1-3598145229.png" alt="Image Description" />
@@ -118,7 +120,7 @@
       <h3 class="text-4xl font-semibold">Galeri</h3>
       <p class="text-gray-600">4 Gambar</p>
     </div>
-    <div class="grid md:grid-cols-2 gap-3 mx-auto max-w-screen-xl" id="lightgallery">
+    <div class="grid md:grid-cols-2 gap-3 mx-auto max-w-screen-xl" id="lightgallery" data-lg-reveal="fade-to-top" data-lg-reveal-stagger="0.2">
       <a href="https://upload.wikimedia.org/wikipedia/commons/2/27/Museum_Agung_Bung_Karno.png">
         <img class="h-[500px] object-cover max-w-full rounded-xl" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Museum_Agung_Bung_Karno.png" />
       </a>
@@ -184,95 +186,17 @@
       </div>
       <!-- End Grid -->
     </footer>
+
     <script src="/node_modules/preline/dist/preline.js"></script>
     <script src="/node_modules/lightgallery.js/dist/js/lightgallery.min.js"></script>
     <script type="text/javascript">
       lightGallery(document.getElementById("lightgallery"));
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+    <script src="/node_modules/@waaark/luge/dist/js/luge.js"></script>
     <script>
-      const HSThemeAppearance = {
-        init() {
-          const defaultTheme = "default";
-          let theme = localStorage.getItem("hs_theme") || defaultTheme;
-
-          if (document.querySelector("html").classList.contains("dark")) return;
-          this.setAppearance(theme);
-        },
-        _resetStylesOnLoad() {
-          const $resetStyles = document.createElement("style");
-          $resetStyles.innerText = `*{transition: unset !important;}`;
-          $resetStyles.setAttribute("data-hs-appearance-onload-styles", "");
-          document.head.appendChild($resetStyles);
-          return $resetStyles;
-        },
-        setAppearance(theme, saveInStore = true, dispatchEvent = true) {
-          const $resetStylesEl = this._resetStylesOnLoad();
-
-          if (saveInStore) {
-            localStorage.setItem("hs_theme", theme);
-          }
-
-          if (theme === "auto") {
-            theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "default";
-          }
-
-          document.querySelector("html").classList.remove("dark");
-          document.querySelector("html").classList.remove("default");
-          document.querySelector("html").classList.remove("auto");
-
-          document.querySelector("html").classList.add(this.getOriginalAppearance());
-
-          setTimeout(() => {
-            $resetStylesEl.remove();
-          });
-
-          if (dispatchEvent) {
-            window.dispatchEvent(new CustomEvent("on-hs-appearance-change", { detail: theme }));
-          }
-        },
-        getAppearance() {
-          let theme = this.getOriginalAppearance();
-          if (theme === "auto") {
-            theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "default";
-          }
-          return theme;
-        },
-        getOriginalAppearance() {
-          const defaultTheme = "default";
-          return localStorage.getItem("hs_theme") || defaultTheme;
-        },
-      };
-      HSThemeAppearance.init();
-
-      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-        if (HSThemeAppearance.getOriginalAppearance() === "auto") {
-          HSThemeAppearance.setAppearance("auto", false);
-        }
-      });
-
-      window.addEventListener("load", () => {
-        const $clickableThemes = document.querySelectorAll("[data-hs-theme-click-value]");
-        const $switchableThemes = document.querySelectorAll("[data-hs-theme-switch]");
-
-        $clickableThemes.forEach(($item) => {
-          $item.addEventListener("click", () => HSThemeAppearance.setAppearance($item.getAttribute("data-hs-theme-click-value"), true, $item));
-        });
-
-        $switchableThemes.forEach(($item) => {
-          $item.addEventListener("change", (e) => {
-            HSThemeAppearance.setAppearance(e.target.checked ? "dark" : "default");
-          });
-
-          $item.checked = HSThemeAppearance.getAppearance() === "dark";
-        });
-
-        window.addEventListener("on-hs-appearance-change", (e) => {
-          $switchableThemes.forEach(($item) => {
-            $item.checked = e.detail === "dark";
-          });
-        });
-      });
+      sal();
     </script>
   </body>
 </html>
