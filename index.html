@@ -12,10 +12,10 @@
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
   <body class="font-[Inter] mx-auto max-w-screen-xl px-2">
-    <header data-lg-reveal="fade-to-bottom" class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-6 dark:bg-gray-800 mx-auto max-w-screen-xl">
-      <nav class="max-w-[85rem] w-full mx-auto sm:flex sm:items-center sm:justify-between" aria-label="Global">
+    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-4">
+      <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
         <div class="flex items-center justify-between">
-          <a class="flex-none text-2xl font-semibold dark:text-white" href="#">Museum Bung Karno</a>
+          <a class="flex-none text-xl md:text-2xl font-semibold" href="#">Museum Bung Karno</a>
           <div class="sm:hidden">
             <button
               type="button"
@@ -35,10 +35,10 @@
         </div>
         <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
           <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
-            <a class="font-medium text-base text-blue-500" href="#" aria-current="page">Beranda</a>
-            <a class="font-medium text-base text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500" href="#">Virtual Tour</a>
-            <a class="font-medium text-base text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500" href="#sejarah">Sejarah</a>
-            <a class="font-medium text-base text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500" href="#galeri">Galeri</a>
+            <a class="font-medium md:text-base text-blue-500" href="#" aria-current="page">Beranda</a>
+            <a class="font-medium md:text-base text-gray-600 hover:text-gray-400" href="#">Virtual Tour</a>
+            <a class="font-medium md:text-base text-gray-600 hover:text-gray-400" href="#sejarah">Sejarah</a>
+            <a class="font-medium md:text-base text-gray-600 hover:text-gray-400" href="#galeri">Gallery</a>
           </div>
         </div>
       </nav>
@@ -75,11 +75,11 @@
           <div class="absolute top-0 left-0 right-0">
             <div class="p-16 md:p-20">
               <h3 class="text-4xl font-bold text-white">Sejarah</h3>
-              <p class="mt-3 text-white">
+              <p class="mt-3 text-white text-sm md:text-base">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, placeat, expedita ad impedit molestiae inventore, corporis maiores minima iure eius explicabo suscipit officia reprehenderit exercitationem iusto veniam
                 accusamus illo pariatur?
               </p>
-              <p class="mt-5 text-xs text-gray-500">Sumber: Wikipedia</p>
+              <p class="mt-5 text-xs text-gray-400">Sumber: Wikipedia</p>
             </div>
           </div>
         </div>
@@ -132,8 +132,10 @@
 
         <div class="mt-3">
           <img class="w-32 mx-auto my-2" src="/assets/Horizontal-Logo.png" alt="" />
-          <p class="text-gray-500">Supported and Powered by <a class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400" href="https://instiki.ac.id" target="_blank">INSTIKI</a></p>
-          <p class="text-gray-500">Copyright © 2023 - All rights reserved.</p>
+          <p class="text-gray-500 text-sm md:text-base">
+            Supported and Powered by <a class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400" href="https://instiki.ac.id" target="_blank">INSTIKI</a>
+          </p>
+          <p class="text-gray-500 text-sm md:text-base">Copyright © 2023 - All rights reserved.</p>
         </div>
 
         <!-- Social Brands -->
