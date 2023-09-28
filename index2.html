@@ -14,7 +14,7 @@
     <script src="/darkmode.js"></script>
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body class="font-[Inter] mx-auto max-w-screen-xl px-2 dark:bg-[#212121]">
+  <body class="font-[Inter] mx-auto max-w-screen-xl px-2">
     <header data-lg-reveal="fade-to-bottom" class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-6 dark:bg-gray-800 mx-auto max-w-screen-xl">
       <nav class="max-w-[85rem] w-full mx-auto sm:flex sm:items-center sm:justify-between" aria-label="Global">
         <div class="flex items-center justify-between">
@@ -145,7 +145,7 @@
 
         <div class="mt-3">
           <img class="w-32 mx-auto my-2" src="/assets/Horizontal-Logo.png" alt="" />
-          <!-- <p class="text-gray-500">We're part of the <a class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400" href="#">Htmlstream</a> family.</p> -->
+          <p class="text-gray-500">Supported and Powered by <a class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400" href="https://instiki.ac.id" target="_blank">INSTIKI</a></p>
           <p class="text-gray-500">Copyright © 2023 - All rights reserved.</p>
         </div>
 
@@ -197,6 +197,26 @@
     <script src="/node_modules/@waaark/luge/dist/js/luge.js"></script>
     <script>
       sal();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+      }
+      window.addEventListener("load", addDarkmodeWidget);
+    </script>
+    <script>
+      const options = {
+        
+      
+     
+       
+        label: "🌓", // default: ''
+    
+      };
+
+      const darkmode = new Darkmode(options);
+      darkmode.showWidget();
     </script>
   </body>
 </html>
