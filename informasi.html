@@ -4,19 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Informasi</title>
-    <link rel="stylesheet" href="/node_modules/lightgallery.js/dist/css/lightgallery.min.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/lightgallery.js/dist/css/lightgallery.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=block" rel="stylesheet" />
-    <link rel="stylesheet" href="/node_modules/@waaark/luge/dist/css/luge.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=block"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/node_modules/@waaark/luge/dist/css/luge.css"
+    />
     <link href="/dist/output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-[Inter] mx-auto max-w-screen-xl px-2">
-    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-4 md:py-6">
-      <nav class="w-full mx-auto sm:flex sm:items-center sm:justify-between" aria-label="Global">
+    <!-- Navbar -->
+    <header
+      class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-4 md:py-6"
+    >
+      <nav
+        class="w-full mx-auto sm:flex sm:items-center sm:justify-between"
+        aria-label="Global"
+      >
         <div class="flex items-center justify-between">
-          <a class="flex-none text-lg md:text-xl font-semibold" href="#">Museum Bung Karno</a>
+          <a
+            href="/index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img src="/assets/logo.jpg" class="h-16" alt="Logo" />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >Museum Bung Karno</span
+            >
+          </a>
           <div class="sm:hidden">
             <button
               type="button"
@@ -25,81 +49,192 @@
               aria-controls="navbar-collapse-with-animation"
               aria-label="Toggle navigation"
             >
-              <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+              <svg
+                class="hs-collapse-open:hidden w-4 h-4"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
               </svg>
-              <svg class="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+              <svg
+                class="hs-collapse-open:block hidden w-4 h-4"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
               </svg>
             </button>
           </div>
         </div>
-        <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
-          <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
-            <a class="font-medium md:text-base text-blue-500" href="#" aria-current="page">Beranda</a>
-            <a class="font-medium md:text-base text-gray-600 hover:text-gray-400" href="#">Virtual Tour</a>
-            <a class="font-medium md:text-base text-gray-600 hover:text-gray-400" href="#sejarah">Sejarah</a>
-            <a class="font-medium md:text-base text-gray-600 hover:text-gray-400" href="#galeri">Galeri</a>
+        <div
+          id="navbar-collapse-with-animation"
+          class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
+        >
+          <div
+            class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5"
+          >
+            <a
+              class="font-medium md:text-base text-blue-500"
+              href="/index.html"
+              aria-current="page"
+              >Beranda</a
+            >
+            <a
+              class="font-medium md:text-base text-gray-600 hover:text-gray-400"
+              href="#"
+              >Virtual Tour</a
+            >
+            <a
+              class="font-medium md:text-base text-gray-600 hover:text-gray-400"
+              href="#sejarah"
+              >Sejarah</a
+            >
+            <a
+              class="font-medium md:text-base text-gray-600 hover:text-gray-400"
+              href="#galeri"
+              >Galeri</a
+            >
           </div>
         </div>
       </nav>
     </header>
-    <section class="relative flex items-center mx-auto max-w-screen-xl overflow-hidden min-h-[500px]" data-lg-reveal="fade-to-bottom">
+    <section
+      class="relative flex items-center mx-auto max-w-screen-xl overflow-hidden min-h-[500px]"
+      data-lg-reveal="fade-to-bottom"
+    >
       <!-- <embed class="mx-auto h-[500px]  lazyload  rounded-xl" src="https://kehen.arcomteknologi.id/panorama/utama/index.html" preload="auto" /> -->
-      <img class="mx-auto h-[500px] overflow-hidden lazyload w-full rounded-xl" src="https://cdn.eraspace.com/pub/media/mageplaza/blog/post/k/a/kamera360derajatprimary.jpg" alt="">
+      <img
+        class="object-cover object-center mx-auto h-[500px] overflow-hidden lazyload w-full rounded-xl"
+        src="/assets/thumbnail sejarah.JPG"
+        alt=""
+      />
       <div
         class="rounded-xl text-center md:text-left absolute text-white top-0 bottom-0 right-0 left-0 bg-gradient-to-r from-black/80 to-transparent flex flex-col px-8 md:px-20 justify-center focus:pointer-events-auto xl:pointer-events-none focus:from-transparent focus:to-transparent"
       >
-        
         <div class="flex flex-col gap-2 md:gap-2 mt-3">
-          <h2 class="text-4xl font-bold">Informasi Website</h2>
-          <p class="md:w-96 line-clamp-3 ">
+          <h2 class="text-4xl md:text-6xl font-bold">Informasi</h2>
+          <!-- <p class="md:w-96 line-clamp-3 ">
             Virtual Reality Tour Museum Bung Karno
-          </p>
-
-          
+          </p> -->
         </div>
       </div>
     </section>
     <!-- Tentang Website -->
-    <main class=" mx-auto max-w-screen-xl gap-3 mt-3" data-lg-reveal="fade-to-top" data-lg-reveal-stagger="0.2">
-      <h3 class="text-4xl font-bold mt-12 mb-4">Tentang Website</h3>
-      <div class="*:my-6">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corporis voluptate maxime reiciendis, in eaque. Mollitia cum a, labore adipisci, ex culpa dicta consectetur quae sapiente vitae autem magnam minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio iure laudantium et inventore! Vel, placeat, sunt facilis minus asperiores veniam, numquam consectetur temporibus nobis sit neque est provident inventore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem accusantium mollitia cumque earum neque alias itaque debitis, inventore nostrum eum veritatis velit hic provident atque a, architecto harum. Cum, optio?</p>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corporis voluptate maxime reiciendis, in eaque. Mollitia cum a, labore adipisci, ex culpa dicta consectetur quae sapiente vitae autem magnam minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio iure laudantium et inventore! Vel, placeat, sunt facilis minus asperiores veniam, numquam consectetur temporibus nobis sit neque est provident inventore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem accusantium mollitia cumque earum neque alias itaque debitis, inventore nostrum eum veritatis velit hic provident atque a, architecto harum. Cum, optio?</p>
-      <div class="mt-24">
-      <h3 class="text-4xl font-bold mb-4">Tentang Virtual Reality Tour</h3>
-      <div class="*:my-6">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corporis voluptate maxime reiciendis, in eaque. Mollitia cum a, labore adipisci, ex culpa dicta consectetur quae sapiente vitae autem magnam minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio iure laudantium et inventore! Vel, placeat, sunt facilis minus asperiores veniam, numquam consectetur temporibus nobis sit neque est provident inventore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem accusantium mollitia cumque earum neque alias itaque debitis, inventore nostrum eum veritatis velit hic provident atque a, architecto harum. Cum, optio?</p>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corporis voluptate maxime reiciendis, in eaque. Mollitia cum a, labore adipisci, ex culpa dicta consectetur quae sapiente vitae autem magnam minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio iure laudantium et inventore! Vel, placeat, sunt facilis minus asperiores veniam, numquam consectetur temporibus nobis sit neque est provident inventore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem accusantium mollitia cumque earum neque alias itaque debitis, inventore nostrum eum veritatis velit hic provident atque a, architecto harum. Cum, optio?</p>
-      </div>
-      </div>
-      <div class="mt-24">
-        <h3 class="text-4xl font-bold mb-4">Panduan Penggunaan</h3>
-        <div class="*:my-6">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corporis voluptate maxime reiciendis, in eaque. Mollitia cum a, labore adipisci, ex culpa dicta consectetur quae sapiente vitae autem magnam minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio iure laudantium et inventore! Vel, placeat, sunt facilis minus asperiores veniam, numquam consectetur temporibus nobis sit neque est provident inventore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem accusantium mollitia cumque earum neque alias itaque debitis, inventore nostrum eum veritatis velit hic provident atque a, architecto harum. Cum, optio?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis corporis voluptate maxime reiciendis, in eaque. Mollitia cum a, labore adipisci, ex culpa dicta consectetur quae sapiente vitae autem magnam minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio distinctio iure laudantium et inventore! Vel, placeat, sunt facilis minus asperiores veniam, numquam consectetur temporibus nobis sit neque est provident inventore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem accusantium mollitia cumque earum neque alias itaque debitis, inventore nostrum eum veritatis velit hic provident atque a, architecto harum. Cum, optio?</p>
-        </div>
-    </div>
-     
+    <main
+      class="mx-auto max-w-[800px] gap-3 mt-10"
+      data-lg-reveal="fade-to-top"
+      data-lg-reveal-stagger="0.2"
+    >
+      <p class="mt-3 text-black text-sm md:text-base">
+        Virtual tour 360 atau biasa kita kenal tur virtual adalah rangkaian
+        gambar panoramik yang digabung dan disusun sedemikian rupa untuk
+        menciptakan pengalaman virtual di lokasi mana pun. Kemudian pengguna
+        dapat merasakan bagaimana berada di suatu tempat tertentu tanpa harus
+        mendatangi tempat tersebut secara langsung.
+      </p>
+      <p class="mt-3 text-black text-sm md:text-base">
+        Website Virtual Reality Tour Ini dibuat pada tanggal 21 Oktober 2023,
+        tujuan dibuatnya Virtual Reality Tour di Museum Bung Karno Ini untuk
+        mengenalkan serta membagikan informasi mengenai Museum Bung Karno,
+        dikemas dalam media Virtual Reality agar mempermudah Masyarakat dalam
+        mengakses serta memberikan pengalaman imersif yang tidak dapat disamai
+        oleh media lainnya.
+      </p>
+      <p class="mt-3 text-black text-sm md:text-base">
+        Dengan VR, pengguna dapat merasa seolah-olah mereka benar-benar berada
+        di dalam museum dan berinteraksi dengan artefak seolah-olah mereka
+        berada di sana secara fisik.
+      </p>
+      <p class="mt-3 text-black text-sm md:text-base">
+        Jika ada pertanyaan atau saran, dapat langsung menghubungi kami
+      </p>
+
+      <!-- Forms -->
+      <form
+        class="mx-auto mt-10"
+        action="https://formspree.io/f/{form_id}"
+        method="post"
+      >
+        <label
+          for="email-address-icon"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Your Email</label
+        >
+        <input
+          type="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="name@yourmail.com"
+        />
+        <label for="text" class="block mb-2 text-sm font-medium text-gray-900"
+          >Your Name</label
+        >
+        <input
+          type="text"
+          id="base-input"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        />
+        <label
+          for="message"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Your message</label
+        >
+        <textarea
+          id="message"
+          rows="4"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Leave a comment..."
+        ></textarea>
+        <button
+          type="submit"
+          class="mt-4 text-white bg-blue-700 hover:bg-blue-800 transition focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+        >
+          Submit
+        </button>
+      </form>
     </main>
 
-   
-
-    <footer class="mt-16 w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+    <footer
+      class="mt-16 w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto"
+    >
       <!-- Grid -->
       <div class="text-center">
         <div>
-          <a class="flex-none text-lg md:text-xl font-semibold text-black dark:text-white" href="#" aria-label="Brand">Museum Bung Karno</a>
+          <a
+            class="flex-none text-lg md:text-xl font-semibold text-black dark:text-white"
+            href="#"
+            aria-label="Brand"
+            >Museum Bung Karno</a
+          >
         </div>
         <!-- End Col -->
 
         <div class="mt-3">
-          <img class="w-32 mx-auto my-2" src="/assets/Horizontal-Logo.png" alt="" />
+          <img
+            class="w-32 mx-auto my-2"
+            src="/assets/Horizontal-Logo.png"
+            alt=""
+          />
           <p class="text-gray-500 text-sm md:text-base">
-            Supported and Powered by <a class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400" href="https://instiki.ac.id" target="_blank">INSTIKI</a>
+            Supported and Powered by
+            <a
+              class="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
+              href="https://instiki.ac.id"
+              target="_blank"
+              >INSTIKI</a
+            >
           </p>
-          <p class="text-gray-500 text-sm md:text-base">Copyright © 2023 - All rights reserved.</p>
+          <p class="text-gray-500 text-sm md:text-base">
+            Copyright © 2023 - All rights reserved.
+          </p>
         </div>
 
         <!-- Social Brands -->
@@ -108,7 +243,14 @@
             class="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
             href="#"
           >
-            <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <svg
+              class="w-3.5 h-3.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
               <path
                 d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"
               />
@@ -118,7 +260,14 @@
             class="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
             href="#"
           >
-            <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <svg
+              class="w-3.5 h-3.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
               <path
                 d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
               />
@@ -128,7 +277,14 @@
             class="inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
             href="#"
           >
-            <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <svg
+              class="w-3.5 h-3.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
               <path
                 d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
               />
